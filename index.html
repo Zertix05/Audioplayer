@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+   <div class="audio-player">
+     <img class="cover-image" src="img/lemonade.png" alt="Beyonce">
+      <!-- Аудио элемент (скрыт) -->
+      <audio id="audio" src="mp3/beyonce.mp3"></audio> 
+  
+        
+        <div class="controls">
+          <div class="play-container">
+            <div class="toggle-play">
+                <img src="img/play.png" alt="Play" class="play-icon">
+          </div>
+          </div>
+          <div class="time">
+            <div class="current">0:00</div>
+            <div class="divider">/</div>
+            <div class="length"></div>
+          </div>
+          <div class="name"><h3 class="track-title"></h3>
+            <p class="track-artist"></p>
+        </div>
+      <!--     credit for icon to https://saeedalipoor.github.io/icono/ -->
+          <div class="music_change">
+          <button class="btn-prev"><img src="" alt=""></button>
+          <button class="btn-next"><img src="" alt=""></button>
+        </div>
+        </div>
+        <div class="timeline">
+            <div class="progress"></div>
+          </div>
+   </div>
+    <script src="script.js"></script> 
+</body>
+</html>

@@ -1,0 +1,136 @@
+
+body{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    height: 100vh;
+    background: url('img/lemonade.png') no-repeat center/cover;
+    font-family: Arial, sans-serif;
+    color:white;
+    
+}
+.audio-player{
+    width:450px;
+    border-radius: 15px;
+    box-shadow:0px 10px 15px rgba(0,0,0, 0.6);
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.9), rgba(60, 60, 60, 0.9)); /* Градиентный фон */
+    backdrop-filter: blur(10px); 
+} 
+img{
+    width:100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.timeline{
+    width: 100%;
+    height: 6px;
+    background-color:rgb(105, 222, 193);
+    cursor: pointer;
+    margin-bottom: 6px;
+    border-radius: 3px;
+    position: relative;
+}
+.progress {
+    width: 0%;
+    height: 100%;
+    background-color: rgb(57, 135, 118);
+    border-radius: 3px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px; /* Одинаковый промежуток между элементами */
+}
+
+.play-container, .time {
+    flex-shrink: 0; /* Запрещаем изменять их размеры */
+}
+.time{
+    display:flex;
+    font-weight: 600;
+    font-size: 18px;
+}
+.divider{
+
+    padding: 0 3px;
+}
+.toggle-play {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: none; /* Убираем фон */
+    cursor: pointer;
+    padding: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+
+.toggle-play.play {
+    background-image: url("img/play.png");
+}
+.toggle-play img, button img {
+    filter:invert(1);
+}
+
+.toggle-play.pause {
+    background-image: url("img/pause.png");
+}
+.toggle-play:hover{
+    scale: 1.1;
+}
+.play-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.play-container{
+    margin-bottom: 7px;
+}
+button {
+    width: 40px;  /* Ширина кнопок */
+    height: 40px; /* Высота кнопок */
+    background-size: cover;  /* Обеспечивает, чтобы изображение заполнило всю кнопку */
+    border: none;  /* Убираем стандартную рамку кнопки */
+    cursor: pointer;  /* Курсор будет показываться в виде руки при наведении */
+    background-repeat: no-repeat;
+    background: none;
+}
+button:hover{
+    opacity: 0.8;
+}
+.name {
+    flex: 1; /* Занимает доступное пространство, но не меняет размер других элементов */
+    min-width: 0; /* Предотвращает некорректное расширение */
+    overflow: hidden;
+    white-space: nowrap; /* Запрещает перенос строк */
+    text-overflow: ellipsis; /* Добавляет "..." при обрезке текста */
+    text-align: left;
+}
+
+
+.track-title{
+color:rgb(127, 215, 69);
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 2px; /* Уменьшаем отступ снизу */
+}
+
+.track-artist{
+    font-size: 18px; /* Чуть меньше, чем у названия */
+    opacity: 0.8; /* Легкая прозрачность */
+    margin-top: 0px;
+}
+
+.music_change{
+    margin-right: 0;
+}
